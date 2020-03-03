@@ -1,0 +1,52 @@
+intellij + Java 추가
+--------------------
+https://m.blog.naver.com/PostView.nhn?blogId=wpdus2694&logNo=221199608625&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+intellij + framework
+--------------------
+
+intellij + Maven
+----------------
+https://www.bsidesoft.com/?p=6160
+
+intellij + spring-boot + jar 빌드
+---------------------------------
+https://tbang.tistory.com/58
+1. 메뉴 > File > Project Structure > Artifacts
+alt+insert or click the plus icon
+and create new artifact choose --> jar --> From modules with dependencies.
+
+2. 메뉴 > Build > Build artifacts --> choose your artifact.
+
+---------------
+
+wsdl : http://192.168.20.40:8080/service/studentDetailsWsdl.wsdl
+TargetNameSpace : http://192.168.20.40:8080/
+접속 URL : http://192.168.20.40:8080/service/student-details
+
+Request :
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://192.168.20.40:8080/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:StudentDetailsRequest>
+         <sch:name>Sajal</sch:name>
+      </sch:StudentDetailsRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response :
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ns2:StudentDetailsResponse xmlns:ns2="http://192.168.20.40:8080/">
+         <ns2:Student>
+            <ns2:name>Sajal</ns2:name>
+            <ns2:standard>5</ns2:standard>
+            <ns2:address>Pune</ns2:address>
+         </ns2:Student>
+      </ns2:StudentDetailsResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
